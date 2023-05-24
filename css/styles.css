@@ -207,24 +207,180 @@ nav ul {
   transform: translate(-50%, -50%);
   opacity: 1;
   transition: opacity 0.5s ease;
+  display: block;
+  box-sizing: border-box;
+  padding: 40px;
 }
 
 .is-hidden .modal-window {
   opacity: 0;
 }
 
-/* @keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+.modal-window h3 {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--third-special-colour);
+  margin-bottom: 2px;
 }
 
-.close-button:active .is-hidden .modal-window {
-  animation: fade-out 10s ease;
+.modal-window form {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.input-description {
+  display: flex;
+  justify-content: left;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: var(--second-special-colour);
+  margin-bottom: 4px;
+  margin-top: 10px;
+}
+
+.input-box {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  display: inline-flex;
+  padding: 12px 42px;
+  position: relative;
+}
+.modal-window input:not(input[type='checkbox']) {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 12px;
+}
+
+.input-box svg {
+  position: absolute;
+  left: 15px;
+  fill: var(--third-special-colour);
+}
+
+.icon-name {
+  width: 12px;
+  height: 12px;
+}
+
+.icon-phone {
+  width: 13px;
+  height: 13px;
+}
+
+.icon-mail-2 {
+  width: 15px;
+  height: 12px;
+}
+
+.input-box:focus-within {
+  border-color: var(--first-special-colour);
+}
+
+.input-box:focus-within svg {
+  fill: var(--first-special-colour);
+}
+
+.modal-window textarea {
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  outline: none;
+}
+
+.modal-window textarea:focus {
+  border-color: var(--first-special-colour);
+}
+
+.modal-window textarea::placeholder {
+  font-family: var(--font-primary);
+  letter-spacing: 0.01em;
+  font-size: 12px;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.checkbox {
+  padding: 20px 14px 30px;
+  align-items: center;
+  display: flex;
+}
+
+.checkbox-control {
+  position: relative;
+  display: inline;
+}
+
+.checkbox-input {
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  /* clip: rect(1px, 1px, 1px, 1px); */
+  opacity: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.checkbox-icon-box {
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 15px;
+  border: 1px solid var(--second-special-colour);
+  border-radius: 2px;
+  z-index: 10;
+  margin-right: 7px;
+}
+
+.icon-checked {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 11px;
+  height: 8px;
+  transform: translate(-50%, -50%);
+  fill: white;
+}
+
+.checkbox-input:checked + .checkbox-icon-box {
+  background-color: var(--first-special-colour);
+  border-color: var(--first-special-colour);
+}
+
+/* .checkbox-input:checked + .checkbox-icon-box::after {
+  background-color: var(--first-special-colour);
+  border-color: var(--first-special-colour);
 } */
+
+.modal-window div p {
+  display: inline;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 171%;
+}
+
+.modal-window div a {
+  color: var(--first-special-colour);
+  text-decoration: underline;
+}
+
+/* input[type='checkbox'] {
+  
+} */
+
+.submit-button {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 0px;
+  border-radius: 4px;
+  background: var(--first-special-colour);
+  padding: 10px 76px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 188%;
+  bottom: 0;
+  color: white;
+}
 
 .close-button {
   position: absolute;
@@ -534,4 +690,49 @@ footer .social-link-icon {
   transition-property: color, background, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.newsletter-box {
+  display: inline-block;
+  width: 700px;
+}
+
+.newsletter-input {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding: 15px 16px;
+  background-color: inherit;
+  color: rgba(255, 255, 255, 0.3);
+  outline: none;
+  margin-right: 28px;
+  width: 50%;
+}
+
+.newsletter-input::placeholder {
+  font-size: 16px;
+  line-height: 125%;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.newsletter-button {
+  position: relative;
+  padding: 10px 76px 10px 42px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 188%;
+  letter-spacing: 0.06em;
+  color: white;
+  background: var(--first-special-colour);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+}
+
+.icon-newsletter {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 28px;
+  fill: white;
 }
