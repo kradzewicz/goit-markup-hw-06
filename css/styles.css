@@ -35,7 +35,7 @@ svg {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .section {
@@ -296,7 +296,7 @@ nav ul {
   border-radius: 4px;
   resize: none;
   outline: none;
-  width: max-content;
+  width: -webkit-fill-available;
 }
 
 .textarea-input:focus,
@@ -714,7 +714,7 @@ footer .social-link-icon {
   background-color: inherit;
   color: rgba(255, 255, 255, 0.3);
   outline: none;
-  width: fit-content;
+  flex-grow: 1;
 }
 
 .newsletter-input::placeholder {
