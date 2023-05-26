@@ -15,6 +15,13 @@
   padding: 0;
 }
 
+*:hover,
+*:focus {
+  transition-property: color, background, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 ul {
   list-style: none;
 }
@@ -35,7 +42,6 @@ svg {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  /* justify-content: space-between; */
 }
 
 .section {
@@ -163,7 +169,7 @@ nav ul {
 }
 
 .service-button {
-  background: #2196f3;
+  background: var(--first-special-colour);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   font-family: var(--font-primary);
@@ -326,7 +332,6 @@ nav ul {
   position: absolute;
   width: 16px;
   height: 15px;
-  /* clip: rect(1px, 1px, 1px, 1px); */
   opacity: 0;
   left: 0;
   z-index: 20;
@@ -395,7 +400,6 @@ nav ul {
   background: white;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  /* padding: 9px 9px 10px 10px; */
 }
 
 .icon-close {
@@ -524,7 +528,6 @@ address li:nth-child(2) {
   color: white;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
 }
 
 .portfolio-description-name {
@@ -687,13 +690,6 @@ footer .social-link-icon {
 .client-box:hover .client-logo,
 .client-box:focus .client-logo {
   fill: var(--first-special-colour);
-}
-
-*:hover,
-*:focus {
-  transition-property: color, background, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .newsletter-div {
